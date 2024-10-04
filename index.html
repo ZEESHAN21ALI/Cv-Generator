@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cv Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Cv Generator</h1>
+    <div class="container">
+        
+        <input type="text" id="name" placeholder="Enter your name" />
+        <span class="error" id="nameError">Required field</span><br>
+
+        <input type="text" id="email" placeholder="Enter your email" />
+        <span class="error" id="emailError">Required field</span><br>
+
+        <input type="text" id="phone" placeholder="Enter your phone number" />
+        <span class="error" id="phoneError">Required field</span><br>
+
+        <input type="text" id="address" placeholder="Enter your address" />
+        <span class="error" id="addressError">Required field</span><br>
+
+        <input type="text" id="degree" placeholder="Enter your degree" />
+        <span class="error" id="degreeError">Required field</span><br>
+
+        <input type="text"  id="institution" placeholder="Enter your institution" />
+        <span class="error" id="institutionError">Required field</span><br>
+
+        <input type="text" id="graduationYear" placeholder="Enter your graduation year" />
+        <span class="error" id="gradYearError">Required field</span><br>
+
+        <input type="text" id="skills" placeholder="Enter your skills" />
+        <span class="error" id="skillsError">Required field</span><br>
+
+        <input type="file" id="photo" /><br><br>
+
+        <div style="margin-top: 20px;">
+            <button onclick="generateResume()">Generate Resume</button>
+        </div>
+
+        <div id="resumeTemplate" class="template">
+            <img id="profilePic" alt="Profile Picture"><br><br>
+
+            <h2 style="background: black; color: white;">Personal Information</h2>
+            <p><strong>Name:</strong> <span id="displayName"></span></p>
+            <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+            <p><strong>Phone:</strong> <span id="displayPhone"></span></p>
+            <p><strong>Address:</strong> <span id="displayAddress"></span></p>
+
+            <h2 style="background: black; color: white;">Academic Background</h2>
+            <p><b>Degree: </b> <span id="displayDegree"></span></p>
+            <p><b>Institution: </b> <span id="displayInstitution"></span></p>
+            <p><b>Graduation Year: </b> <span id="displayGradYear"></span></p>
+
+            <h2 style="background: black; color: white;">Skills</h2>
+            <p id="displaySkills"></p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
